@@ -3,7 +3,9 @@ class voteClass {
         constructor (){
            this.voteNumber = ``
            this.nodeKey = ``
-           this.voteNode ()               
+           this.voteNode () 
+           this.getMinVoteNumber ()
+           this.min = ``              
         }
 
     voteNode() { //随机数的方法函数 
@@ -23,18 +25,32 @@ class voteClass {
     }
 
     getBuffer(){
-    const buf1 = Buffer.from(`0571      0.28146981`)
-    const buf2 = Buffer.from(`5322      0.69726856`)
-    const buf3 = Buffer.from(`2137      0.19104486`)
-    const buf4 = Buffer.from(`3109      0.23197665`)
+    const buf1 = Buffer.from(`0.28146981`)
+    const buf2 = Buffer.from(`0.69726856`)
+    const buf3 = Buffer.from(`0.19104486`)
+    const buf4 = Buffer.from(`0.23197665`)
     //const buf_all = Buffer.concat([buf1,buf2,buf3,buf4])
     //console.log([buf1,buf2,buf3,buf4])
     console.log(`nodekey   voteNumber`)
-    console.log(buf1.toString())
-    console.log(buf2.toString())
-    console.log(buf3.toString())
-    console.log(buf4.toString())
+    console.log(buf1.toString(),buf2.toString(),buf3.toString(),buf3.toString(),buf4,toString())
+    //console.log(buf2.toString())
+    //console.log(buf3.toString())
+    //console.log(buf4.toString())
     }
+
+    
+    getMinVoteNumber(){
+        function arrayMin(arrs){
+            var min = arrs[0]
+            for(var i = 1, ilen = arrs.length; i < ilen; i+=1) {
+                if(arrs[i] < min) {
+                    this.min = arrs[i]
+                }
+            }
+            return this.min       
+    }
+
+}
 }
 
 module.exports = voteClass
