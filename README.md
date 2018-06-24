@@ -7,9 +7,12 @@
 
 ```
 
-Number: getVoteNumber() // 为自己所在节点生成票数（随机的0-1的八位小数）
-getNodeKey() // 为自己所在节点生成身份编号（四位整数代码）
+1: getVoteNumber() // 为自己所在节点生成票数（随机的0-1的八位小数）
 
-Number: getVote(nodeKey) // 获取目标节点的票数
+2: getNodeKey() // 为自己所在节点生成身份编号（四位整数代码）
+
+3: getVote(nodeKey) // 获取目标节点的票数
+
+4: getMinVoteNumber // 比对获得最小投票数
 
 ```
