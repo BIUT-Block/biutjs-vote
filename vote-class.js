@@ -4,8 +4,8 @@ class voteClass {
            this.voteNumber = ``
            this.nodeKey = ``
            this.voteNode () 
-           this.getMinVoteNumber ()
-           this.min = ``              
+           this.arrayMin ()
+                      
         }
 
     voteNode() { //随机数的方法函数 
@@ -39,18 +39,37 @@ class voteClass {
     }
 
     
-    getMinVoteNumber(){
-        function arrayMin(arrs){
-            var min = arrs[0]
-            for(var i = 1, ilen = arrs.length; i < ilen; i+=1) {
-                if(arrs[i] < min) {
-                    this.min = arrs[i]
-                }
+    arrayMin(arrs){
+            var min = this[0]
+            var len = this.length
+            //for(var i = 1, ilen = arrs.len; i < ilen; i+=1) {
+                //if(arrs[i] < min) {
+                //    min = arrs[i]
+                //}
+                for (var i = 1; i < len; i++){ 
+                    if (this[i] < min){ 
+                    min = this[i]; 
             }
-            return this.min       
+            return min
     }
-
+    }
+/** 
+    var min = this[0];
+    var len = this.length;
+    for (var i = 1; i < len; i++){ 
+    if (this[i] < min){ 
+    min = this[i]; 
+    } 
+    } 
+    return min;
+    }
 }
+   
 }
 
+getMinVoteNumber(){
+    var min = Math.min.apply(Math,values); 
+}
+*/
+}
 module.exports = voteClass
