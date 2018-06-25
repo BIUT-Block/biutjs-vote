@@ -40,19 +40,15 @@ class voteClass {
 
     
     arrayMin(arrs){
-            var min = this[0]
-            var len = this.length
-            //for(var i = 1, ilen = arrs.len; i < ilen; i+=1) {
-                //if(arrs[i] < min) {
-                //    min = arrs[i]
-                //}
-                for (var i = 1; i < len; i++){ 
-                    if (this[i] < min){ 
-                    min = this[i]; 
+        var min = arrs[0]
+            for(var i = 0, ilen = arrs.length; i < ilen; i+=1) {
+                if(arrs[i] < min) {
+                    min = arrs[i]
+                }
             }
             return min
     }
-    }
+    
 /** 
     var min = this[0];
     var len = this.length;
@@ -71,5 +67,6 @@ getMinVoteNumber(){
     var min = Math.min.apply(Math,values); 
 }
 */
+
 }
 module.exports = voteClass

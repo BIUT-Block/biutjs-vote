@@ -1,5 +1,5 @@
-voteClass = require('./vote-class')
-vote1 = new voteClass
+const voteClass = require('./vote-class')
+let vote1 = new voteClass()
 
 //生成投票数及节点序号方法的测试
 let a = vote1.getVoteNumber()
@@ -12,9 +12,9 @@ console.log("nodeKey:"+ b)
 let c = vote1.getBuffer()
 
 //取最小值的测试
-
-let d = vote1.arrayMin()
-
 var rets = [0.28146981,0.69726856,0.19104486,0.23197665]
-console.log(min(rets))
+
+
+let d = vote1.arrayMin(rets)
+console.log(d)
 
