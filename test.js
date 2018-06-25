@@ -12,9 +12,6 @@ console.log("nodeKey:"+ b)
 let c = vote1.getBuffer()
 
 //取最小值的测试
-var rets = [0.28146981,0.69726856,0.19104486,0.23197665]
-
-
-let d = vote1.arrayMin(rets)
-console.log(d)
+let d = vote1.arrayMin()
+console.log(d)  
 
